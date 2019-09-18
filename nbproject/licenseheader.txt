@@ -1,0 +1,9 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}Neohome.net.
+${licensePrefix}
+${licensePrefix}Copyright 2019 by Sergey Fedotov <fsa@tavda.info>
+<#if licenseLast??>
+${licenseLast}
+</#if>
