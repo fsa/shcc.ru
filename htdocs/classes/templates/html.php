@@ -17,7 +17,7 @@ class HTML {
 </head>
 <body>
 <div class="MenuWrap">
-Хаб умного дома Neohome
+    <span class="ListItem">Хаб умного дома Neohome</span>
 </div>
 <div class="MainContent">
 <?php
