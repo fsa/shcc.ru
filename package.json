@@ -1,0 +1,28 @@
+{
+    "name": "neohome.net",
+    "version": "0.0.1",
+    "description": "Сайт хаба умного дома Neohome",
+    "homepage": "https://github.com/fsa/neohome.net",
+    "bugs": {
+        "email": "support@tavda.net"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/fsa/neohome.net.git"
+    },
+    "main": "gulpfile.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Sergey Fedotov",
+    "license": "GPL-3.0+",
+    "devDependencies": {
+        "browser-sync": "^2.26.7",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^6.1.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-cssnano": "^2.1.3",
+        "gulp-rename": "^1.4.0",
+        "gulp-sass": "^4.0.2"
+    }
+}

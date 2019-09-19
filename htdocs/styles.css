@@ -1,12 +1,10 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
-}
+  background-color: #ffffff; }
 
 html {
-  height: 100%;
-}
+  height: 100%; }
 
 body {
   font-size: 14pt;
@@ -21,12 +19,10 @@ body {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-height: 100%;
-}
+  min-height: 100%; }
 
 .MenuWrap {
   background: -webkit-gradient(linear, left top, left bottom, from(#6699dd), to(#66ccff));
-  background: -webkit-linear-gradient(#6699dd, #66ccff);
   background: -o-linear-gradient(#6699dd, #66ccff);
   background: linear-gradient(#6699dd, #66ccff);
   background-color: #66ccff;
@@ -45,8 +41,7 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 1rem;
-}
+  padding: 0 1rem; }
 
 @media (min-width: 31.25em) {
   .MenuWrap {
@@ -54,26 +49,20 @@ body {
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
         -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
+            flex-direction: row; } }
 
 .ListItem,
 .LastItem {
   color: black;
   text-decoration: none;
   margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
+  margin-bottom: 0.5em; }
 
 @media (min-width: 31.25em) {
   .ListItem {
-    margin-right: 1rem;
-  }
+    margin-right: 1rem; }
   .LastItem {
-    margin-left: auto;
-  }
-}
+    margin-left: auto; } }
 
 .MainContent {
   -webkit-box-flex: 1;
@@ -81,20 +70,16 @@ body {
       -ms-flex: 1;
           flex: 1;
   color: black;
-  padding: .5rem;
-}
+  padding: .5rem; }
 
 .MainContent p {
-  text-align: justify;
-}
+  text-align: justify; }
 
 .MainContent li {
-  text-align: justify;
-}
+  text-align: justify; }
 
 .Footer {
   background: -webkit-gradient(linear, left top, left bottom, from(#6699dd), to(#66ccff));
-  background: -webkit-linear-gradient(#6699dd, #66ccff);
   background: -o-linear-gradient(#6699dd, #66ccff);
   background: linear-gradient(#6699dd, #66ccff);
   background-color: #66ccff;
@@ -113,5 +98,4 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 1rem;
-}
+  padding: 0 1rem; }
