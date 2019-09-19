@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Хаб умного дома Неохом</title>
-</head>
-<body>
+<?php
+require_once './common.php';
+HTML::showPageHeader('Хаб умного дома Неохом');
+?>
 <p>Это сайт проекта хаба умного дома &laquo;Неохом&raquo;.</p>
 <p>Проект написан на языке PHP с использованием сервера баз данных PostgreSQL. Для запуска могут быть использованы любые дистрибутивы Linux. Минимальные требования к версиям ПО:</p>
 <ol>
@@ -16,5 +13,5 @@
 <p>Проект бы создан под впечатлением от MajorDoMo. Изначально было присвоено кодовое имя phpmd (php majordomo - PHP мажордом), но после реализации базового функционала было принято решение отказаться от этого имени и использовать Neohome<!-- (сокращение от Neuron OpenSource Smarthome, Neuron - кодовое имя наработок, использованных в качестве ядра проекта)-->.</p>
 <p>Git репозиторий проекта: <a href="https://github.com/fsa/neohome">https://github.com/fsa/neohome</a>.</p>
 <p>Документация: <a href="https://docs.neohome.net/">https://docs.neohome.net/</a></p>
-</body>
-</html>
+<?php
+HTML::showPageFooter();
