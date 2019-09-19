@@ -17,7 +17,9 @@ class HTML {
 </head>
 <body>
 <div class="MenuWrap">
-    <span class="ListItem">Хаб умного дома Neohome</span>
+    <a href="https://neohome.net/" class="ListItem">Хаб умного дома Neohome</a>
+    <a href="https://github.com/fsa/neohome" class="ListItem">Git репозиторий</a>
+    <a href="https://docs.neohome.net/" class="ListItem">Документация</a>
 </div>
 <div class="MainContent">
 <?php
