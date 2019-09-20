@@ -84,6 +84,18 @@ footer {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 0.5rem 0; }
+  padding: 0;
+  width: 100%; }
   .listrow .listitem {
-    padding: 0 0.5rem; }
+    padding: 0.5rem; }
+
+@media (max-width: 33em) {
+  .listrow {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .listrow .listitem {
+      padding: 1rem 0;
+      text-align: center; } }
