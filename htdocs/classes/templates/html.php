@@ -16,21 +16,23 @@ class HTML {
 <?=$this->header?>
 </head>
 <body>
-<div class="MenuWrap">
-    <a href="https://neohome.net/" class="ListItem">Хаб умного дома Neohome</a>
-    <a href="https://github.com/fsa/neohome" class="ListItem">Git репозиторий</a>
-    <a href="https://docs.neohome.net/" class="ListItem">Документация</a>
-</div>
-<div class="MainContent">
+<header>
+<nav class="listrow">
+    <a href="https://neohome.net/" class="listitem">Хаб умного дома Neohome</a>
+    <a href="https://github.com/fsa/neohome" class="listitem">Git репозиторий</a>
+    <a href="https://docs.neohome.net/" class="listitem">Документация</a>
+</nav>
+</header>
+<main>
 <?php
     }
 
     public function Footer() {
 ?>
-</div>
-<div class="Footer">
-    <span class="LastItem">&copy; <a href="https://tavda.net/">Сергей Федотов</a>, 2019.</span>
-</div>
+</main>
+<footer>
+<p>&copy; <a href="https://tavda.net/">Сергей Федотов</a>, 2019.</p>
+</footer>
 </body>
 </html>
 <?php
