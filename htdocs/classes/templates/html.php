@@ -11,6 +11,7 @@ class HTML {
 <meta charset="utf-8">
 <title><?=$this->title?></title>
 <meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#45309b">
 <link rel="stylesheet" href="/styles.css">
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 <?=$this->header?>
