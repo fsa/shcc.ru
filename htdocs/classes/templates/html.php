@@ -19,9 +19,9 @@ class HTML {
 <body>
 <header>
 <nav class="listrow">
-    <a href="https://neohome.net/" class="listitem">Хаб умного дома Neohome</a>
-    <a href="https://github.com/fsa/neohome" class="listitem">Git репозиторий</a>
-    <a href="https://docs.neohome.net/" class="listitem">Документация</a>
+    <a href="https://shcc.ru/" class="listitem">Контроллер умного дома SHCC</a>
+    <a href="https://github.com/fsa/shcc" class="listitem">Git репозиторий</a>
+    <a href="https://docs.shcc.ru/" class="listitem">Документация</a>
 </nav>
 </header>
 <main>
