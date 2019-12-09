@@ -1,8 +1,8 @@
 {
-    "name": "neohome.net",
+    "name": "shcc.ru",
     "version": "0.0.1",
     "description": "Сайт контроллера умного дома SHCC",
-    "homepage": "https://github.com/fsa/neohome.net",
+    "homepage": "https://github.com/fsa/shcc.ru",
     "bugs": {
         "email": "support@tavda.net"
     },
