@@ -26,7 +26,7 @@ function watchTask() {
     });
     watch('src/scss/**/*.+(scss|sass)', scssTask);
     watch('htdocs/**/*.+(php|html|css|js)', bs.reload);
-}
+};
 
 exports.scss = scssTask;
 exports.watch = watchTask;

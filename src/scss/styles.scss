@@ -1,4 +1,5 @@
-@import "colors";
+//@import "colors";
+$theme-colors-primary: #527779;
 
 html,body {
     margin: 0;
@@ -20,8 +21,8 @@ header {
     display: flex;
     flex-direction: row;
     margin: 0;
-    padding: 0;
-    background-color: $color-primary-4;
+    padding: 1rem;
+    background-color: $theme-colors-primary;
     color: white;
     a {
         color: white;
@@ -45,12 +46,12 @@ footer {
     display: flex;
     flex-direction: row;
     margin: 0;
-    padding: 0;
-    background-color: $color-primary-4;
+    padding: 1rem;
+    background-color: $theme-colors-primary;
     color: white;
     p {
         margin: 0;
-        padding: 0.5rem;
+        padding: 0rem;
     }
     a {
         color: white;
