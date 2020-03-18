@@ -32,7 +32,7 @@ header {
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 0;
-  padding: 0;
+  padding: 1rem;
   background-color: #527779;
   color: white; }
   header a {
@@ -64,12 +64,12 @@ footer {
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 0;
-  padding: 0;
+  padding: 1rem;
   background-color: #527779;
   color: white; }
   footer p {
     margin: 0;
-    padding: 0.5rem; }
+    padding: 0rem; }
   footer a {
     color: white;
     text-decoration: none; }
