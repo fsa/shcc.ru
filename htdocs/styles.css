@@ -32,7 +32,7 @@ header {
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 0;
-  padding: 1rem;
+  padding: 1rem 0;
   background-color: #527779;
   color: white; }
   header a {
@@ -45,7 +45,7 @@ main {
       -ms-flex: 1;
           flex: 1;
   color: black;
-  padding: .5rem; }
+  padding: 1rem; }
   main h1 {
     margin: 0;
     padding: 0;
@@ -64,12 +64,12 @@ footer {
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 0;
-  padding: 1rem;
+  padding: 1rem 0;
   background-color: #527779;
   color: white; }
   footer p {
     margin: 0;
-    padding: 0rem; }
+    padding: 0 1rem; }
   footer a {
     color: white;
     text-decoration: none; }
@@ -87,9 +87,9 @@ footer {
   padding: 0;
   width: 100%; }
   .listrow .listitem {
-    padding: 0.5rem; }
+    padding: 0 1rem; }
 
-@media (max-width: 33em) {
+@media (max-width: 600px) {
   .listrow {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -97,5 +97,6 @@ footer {
         -ms-flex-direction: column;
             flex-direction: column; }
     .listrow .listitem {
-      padding: 1rem 0;
+      margin: 0;
+      padding: 0.5rem 0;
       text-align: center; } }

@@ -21,7 +21,7 @@ header {
     display: flex;
     flex-direction: row;
     margin: 0;
-    padding: 1rem;
+    padding: 1rem 0;
     background-color: $theme-colors-primary;
     color: white;
     a {
@@ -32,7 +32,7 @@ header {
 main {
     flex: 1;
     color: black;
-    padding: .5rem;
+    padding: 1rem;
     h1 {
         margin: 0;
         padding: 0;
@@ -46,12 +46,12 @@ footer {
     display: flex;
     flex-direction: row;
     margin: 0;
-    padding: 1rem;
+    padding: 1rem 0;
     background-color: $theme-colors-primary;
     color: white;
     p {
         margin: 0;
-        padding: 0rem;
+        padding: 0 1rem;
     }
     a {
         color: white;
@@ -65,14 +65,15 @@ footer {
     padding: 0;
     width: 100%;
     .listitem {
-        padding: 0.5rem;
+        padding: 0 1rem;
     }
 }
-@media (max-width: 33em) {
+@media (max-width: 600px) {
     .listrow {
         flex-direction: column;
         .listitem {
-            padding: 1rem 0;
+            margin: 0;
+            padding: 0.5rem 0;
             text-align: center;
         }
     }

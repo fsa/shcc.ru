@@ -1,6 +1,6 @@
 <?php
 namespace Templates;
-class HTML {
+class ContentPage {
   public $header;
   
   public function Header() {
@@ -32,7 +32,7 @@ class HTML {
 ?>
 </main>
 <footer>
-<p>&copy; <a href="https://tavda.net/">Сергей Федотов</a>, 2019.</p>
+<p>&copy; <a href="https://tavda.net/">Сергей Федотов</a>, 2019-2020.</p>
 </footer>
 </body>
 </html>

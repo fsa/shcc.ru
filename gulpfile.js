@@ -22,7 +22,7 @@ function scssTask() {
 
 function watchTask() {
     bs.init({
-        proxy: "neohome.net.localhost"
+        proxy: "shcc.ru.localhost"
     });
     watch('src/scss/**/*.+(scss|sass)', scssTask);
     watch('htdocs/**/*.+(php|html|css|js)', bs.reload);
