@@ -11,7 +11,7 @@ class ContentPage {
         $title=is_null($this->title)?$this->site_info->title:$this->title.' :: '.$this->site_info->title;
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
 <meta charset="utf-8">
 <title><?=$title?></title>
