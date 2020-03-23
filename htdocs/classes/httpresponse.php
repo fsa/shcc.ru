@@ -55,6 +55,7 @@ class httpResponse {
         if (!is_null(self::$etag)) {
             header("ETag: ".self::$etag);
         }
+        self::disableBrowserCache();
         $template->Header();
         $notification=filter_input(INPUT_COOKIE, 'notification');
         if ($notification) {
@@ -79,6 +80,7 @@ class httpResponse {
             $template->redirect_uri=$redirect_url;
             $template->url='/login/';
         }
+        self::disableBrowserCache();
         $template->show();
     }
 
@@ -89,6 +91,10 @@ class httpResponse {
         $method_name=substr($name, 4);
         $callback=array(self::getInstance(), $method_name);
         return call_user_func_array($callback, $args);
+    }
+
+    public static function disableBrowserCache() {
+        header("Cache-Control: no-store, no-cache, must-revalidate");
     }
 
     # Информация для пользователя
@@ -104,6 +110,7 @@ class httpResponse {
         $template->title=$title;
         $template->site_info=Settings::get('site');
         $template->message=$message;
+        self::disableBrowserCache();
         $template->show();
     }
 
