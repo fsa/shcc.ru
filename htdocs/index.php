@@ -1,6 +1,6 @@
 <?php
 require_once './common.php';
-httpResponse::showHtmlHeader('Контроллер умного дома SHCC');
+httpResponse::showHtmlHeader('Контроллер умного дома');
 ?>
 <h1>Контроллер умного дома &laquo;SHCC&raquo;</h1>
 <p>Проект написан на языке PHP с использованием сервера баз данных PostgreSQL. Для запуска могут быть использованы любые дистрибутивы Linux. Минимальные требования к версиям ПО:</p>

@@ -1,15 +1,20 @@
 <?php
 namespace Templates;
+
 class ContentPage {
-  public $header;
-  
+
+    public $title;
+    public $site_info;
+    public $header;
+
   public function Header() {
+        $title=is_null($this->title)?$this->site_info->title:$this->title.' :: '.$this->site_info->title;
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
-<title><?=$this->title?></title>
+<title><?=$title?></title>
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#45309b">
 <link rel="stylesheet" href="/styles.css">
