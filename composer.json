@@ -1,0 +1,16 @@
+{
+    "name": "fsa/shcc-ru",
+    "description": "Сайт контроллера умного дома SHCC.",
+    "version": "0.1.0",
+    "type": "project",
+    "license": "GPLv3",
+    "authors": [
+        {
+            "name": "Sergey Fedotov",
+            "email": "fsa@tavda.info"
+        }
+    ],
+    "require": {
+        "php" : "^7.4"
+    }
+}
