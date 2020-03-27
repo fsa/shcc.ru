@@ -2,13 +2,16 @@
 
 class httpResponse {
 
+    const MODE_JSON=1;
+    const MODE_HTML=2;
+    const MODE_HTML_POPUP=3;
+
     private static $template;
     private static $last_modified;
     private static $etag;
     private static $title;
     private static $popup_id=0;
-    private static $header_shown=false;
-    private static $debug=false;
+    private static $mode;
 
     # Ответ HTML
     public static function getTemplate() {
@@ -45,7 +48,7 @@ class httpResponse {
     }
 
     public static function showHtmlHeader($title=null) {
-        self::$header_shown=true;
+        self::$mode=self::MODE_HTML_POPUP;
         $template=self::getTemplate();
         $template->title=$title;
         $template->site_info=Settings::get('site');
@@ -86,11 +89,10 @@ class httpResponse {
 
     public static function __callStatic($name, $args) {
         if (substr($name, 0, 4)!='show') {
-            throw new Exception('Вызван несуществующий метод '.$name);
+            throw new Exception('Call to undefined method '.__CLASS__.'::'.$name);
         }
         $method_name=substr($name, 4);
-        $callback=array(self::getInstance(), $method_name);
-        return call_user_func_array($callback, $args);
+        return self::getTemplate()->$method_name(...$args);
     }
 
     public static function disableBrowserCache() {
@@ -115,23 +117,45 @@ class httpResponse {
     }
 
     public static function showError(string $message) {
-        if (self::$header_shown) {
-            self::showPopup($message, 'Ошибка', 'danger');
-            self::showHtmlFooter();
-        } else {
-            self::showMessagePage($message, 'Ошибка', 'danger');
+        switch (self::$mode) {
+            case self::MODE_JSON:
+                self::json(['error'=>$message]);
+                exit;
+            case self::MODE_HTML_POPUP:
+                self::showPopup($message, 'Ошибка', 'danger');
+                self::showHtmlFooter();
+                return;
+            default:
+                self::showMessagePage($message, 'Ошибка', 'danger');
         }
         exit;
     }
 
     public static function showInformation(string $message) {
-        if (self::$header_shown) {
-            self::showPopup($message, 'Информация', 'info');
-            return;
-        } else {
-            self::showMessagePage($message, 'Информация', 'info');
+        switch (self::$mode) {
+            case self::MODE_JSON:
+                self::json(['error'=>$message]);
+                exit;
+            case self::MODE_HTML_POPUP:
+                self::showPopup($message, 'Информация', 'info');
+                return;
+            default:
+                self::showMessagePage($message, 'Информация', 'info');
         }
-        exit;
+    }
+
+    public static function showAccessError(bool $is_logged) {
+        switch (self::$mode) {
+            case self::MODE_JSON:
+                self::json(['error'=>$is_logged?'Доступ запрещён.':'Не выполнен вход.']);
+                exit;
+            default:
+                if($is_logged) {
+                    self::showError('Доступ запрещён.');
+                } else {
+                    self::showLoginForm(getenv('REQUEST_METHOD')=='GET'?getenv('REQUEST_URI'):'/');
+                }
+        }
     }
 
     # Ответ JSON
@@ -179,27 +203,29 @@ class httpResponse {
 
     # Exceptions handlers
     public static function HtmlException($ex) {
-        if (self::$debug) {
+        if (Settings::get('debug', false)) {
             $message=$ex;
         } else {
-            error_log($message, 0);
+            error_log($ex, 0);
             $message='Произошла программная ошибка на сервере.';
         }
         self::showError($message);
     }
 
-    public static function setHtmlExceptionHanler(bool $debug=false) {
-        self::$debug=$debug;
+    public static function JsonException($ex) {
+        error_log($ex, 0);
+        self::showError('Произошла программная ошибка на сервере.');
+    }
+
+    # Установка режимов и подключение обработчиков ошибок
+    public static function setModeHtml() {
+        self::$mode=self::MODE_HTML;
         set_exception_handler([__CLASS__, 'HtmlException']);
     }
 
-    public static function setJsonExceptionHanler() {
+    public static function setModeJson() {
+        self::$mode=self::MODE_JSON;
         set_exception_handler([__CLASS__, 'JsonException']);
-    }
-
-    public static function JsonException($ex) {
-        error_log($ex, 0);
-        self::json(['error'=>'Internal Server Error']);
     }
 
 }
