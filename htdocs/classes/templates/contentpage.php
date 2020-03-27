@@ -8,7 +8,7 @@ class ContentPage {
     public $header;
 
   public function Header() {
-        $title=is_null($this->title)?$this->site_info->title:$this->title.' :: '.$this->site_info->title;
+        $title=is_null($this->title)?$this->site_info['title']:$this->title.' :: '.$this->site_info['title'];
 ?>
 <!DOCTYPE html>
 <html lang="ru">
