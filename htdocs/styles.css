@@ -100,3 +100,7 @@ footer {
       margin: 0;
       padding: 0.5rem 0;
       text-align: center; } }
+
+.screenshot-desktop {
+  max-width: 99%;
+  border: 2px #527779 solid; }

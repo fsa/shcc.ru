@@ -3,7 +3,7 @@
     "description": "Сайт контроллера умного дома SHCC.",
     "version": "0.1.0",
     "type": "project",
-    "license": "GPLv3",
+    "license": "proprietary",
     "authors": [
         {
             "name": "Sergey Fedotov",

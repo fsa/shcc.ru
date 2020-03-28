@@ -7,7 +7,7 @@ const {src, dest, watch, series, parallel} = require('gulp'),
     bs = require('browser-sync').create();
 
 function scssTask() {
-    return src('src/scss/**/*.+(scss|sass)')
+    return src('../src/scss/**/*.+(scss|sass)')
             .pipe(sass(
 //                    {
 //                        outputStyle: 'expanded',
@@ -16,7 +16,7 @@ function scssTask() {
             ))
             .pipe(autoprefixer(['last 15 versions', '>1%', 'ie 8']))
 //    .pipe(cssnano())
-            .pipe(dest('htdocs'))
+            .pipe(dest('../htdocs'))
             .pipe(bs.stream());
 };
 
@@ -24,8 +24,8 @@ function watchTask() {
     bs.init({
         proxy: "shcc.ru.localhost"
     });
-    watch('src/scss/**/*.+(scss|sass)', scssTask);
-    watch('htdocs/**/*.+(php|html|css|js)', bs.reload);
+    watch('../src/scss/**/*.+(scss|sass)', scssTask);
+    watch('../htdocs/**/*.+(php|html|css|js)', bs.reload);
 };
 
 exports.scss = scssTask;

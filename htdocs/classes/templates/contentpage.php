@@ -25,6 +25,7 @@ class ContentPage {
 <header>
 <nav class="listrow">
     <a href="https://shcc.ru/" class="listitem">Контроллер умного дома SHCC</a>
+    <a href="/screenshots/" class="listitem">Скриншоты</a>
     <a href="https://github.com/fsa/shcc" class="listitem">Git репозиторий</a>
     <a href="https://docs.shcc.ru/" class="listitem">Документация</a>
 </nav>
