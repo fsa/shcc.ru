@@ -7,16 +7,11 @@ const {src, dest, watch, series, parallel} = require('gulp'),
     bs = require('browser-sync').create();
 
 function scssTask() {
-    return src('../src/scss/**/*.+(scss|sass)')
-            .pipe(sass(
-//                    {
-//                        outputStyle: 'expanded',
-//                        includePaths: ["node_modules/bootstrap/scss/"]
-//                    }
-            ))
+    return src('scss/**/*.+(scss|sass)')
+            .pipe(sass())
             .pipe(autoprefixer(['last 15 versions', '>1%', 'ie 8']))
-//    .pipe(cssnano())
-            .pipe(dest('../htdocs'))
+            .pipe(cssnano())
+            .pipe(dest('../webroot'))
             .pipe(bs.stream());
 };
 
@@ -24,8 +19,8 @@ function watchTask() {
     bs.init({
         proxy: "shcc.ru.localhost"
     });
-    watch('../src/scss/**/*.+(scss|sass)', scssTask);
-    watch('../htdocs/**/*.+(php|html|css|js)', bs.reload);
+    watch('scss/**/*.+(scss|sass)', scssTask);
+    watch('../webroot/**/*.+(php|html|css|js)', bs.reload);
 };
 
 exports.scss = scssTask;
