@@ -1,0 +1,10 @@
+title: SHCC
+url: https://shcc.ru
+email: support@tavda.net
+sass:
+  sass_dir: _scss
+  style: compressed
+permalink: /:title
+highlighter: rouge
+markdown: kramdown
+timezone: Asia/Yekaterinburg
