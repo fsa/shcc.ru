@@ -1,5 +1,5 @@
 ---
-title: Контроллер умного дома
+title: Контроллер умного дома SHCC
 layout: default
 ---
 # Контроллер умного дома &laquo;SHCC&raquo;
